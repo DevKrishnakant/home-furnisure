@@ -50,7 +50,10 @@ export default function AnimatedWords({ text, delayStep = 0.18, sx, className, p
         <Box
           key={i}
           component="span"
-          ref={el => (wordRefs.current[i] = el)}
+          ref={(el: HTMLSpanElement | null) => {
+            wordRefs.current[i] = el;
+          }}
+          
           sx={{
             display: "inline-block",
             mx: 0.5,
