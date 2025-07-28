@@ -57,8 +57,10 @@ export default function AnimatedLetters({ text, delayStep = 0.08, sx, className,
         <Box
           key={i}
           component="span"
-          ref={el => (letterRefs.current[i] = el)}
-          sx={{
+          ref={(el: HTMLSpanElement | null) => {
+            letterRefs.current[i] = el;
+          }}
+                    sx={{
             display: "inline-block",
             mx: letter === " " ? 1 : 0,
             opacity: revealed[i] ? 1 : 0,
