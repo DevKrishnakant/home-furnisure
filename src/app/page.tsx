@@ -1,11 +1,6 @@
 "use client";
-import ShareSection from "@/components/ShareSection";
-import AboutSection from "@/components/AboutSection";
-import ProjectGallerySection from "@/components/ProjectGallerySection";
-import HeroChairSection from "@/components/HeroChairSection";
-import AwardsSection from "@/components/AwardsSection";
-import FooterSection from "@/components/FooterSection";
-import HeroMainSection from "@/components/HeroMainSection";
+import { ShareSection, AboutSection, ProjectGallerySection, HeroChairSection, AwardsSection } from "@/components/features";
+import { FooterSection, HeroMainSection } from "@/components/layout";
 
 export default function Home() {
   return (

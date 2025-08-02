@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import Link from "next/link";
 
 export default function HeroChairSection() {
   return (
@@ -48,11 +49,12 @@ export default function HeroChairSection() {
         </Typography>
       </Box>
       {/* Our Projects Button */}
+      <Link href="/our-projects">
       <Box
         sx={{
           position: "absolute",
-          left: { xs: 24, md: 60 },
-          bottom: { xs: 32, md: 48 },
+          left: { xs: 24, md: 87 },
+          bottom: { xs: 32, md: 120 },
           zIndex: 2,
         }}
       >
@@ -60,9 +62,10 @@ export default function HeroChairSection() {
           sx={{
             display: "flex",
             alignItems: "center",
-            border: "2px solid white",
+            border: "1px solid white",
             borderRadius: 999,
-            px: 3,
+            pl: 3,
+            pr: 1.5,
             py: 1.2,
             fontSize: { xs: "1.3rem", md: "2rem" },
             fontWeight: 400,
@@ -70,14 +73,23 @@ export default function HeroChairSection() {
             color: "white",
             background: "rgba(0,0,0,0.05)",
             cursor: "pointer",
-            minWidth: 180,
             justifyContent: "space-between",
-            width: { xs: "auto", md: 260 },
+            width: "auto",
+            letterSpacing: "-1px",
             boxShadow: 2,
+            transition: "background 0.3s, color 0.3s",
+            '&:hover': {
+              background: "white",
+              color: "black",
+              '& .project-circle': {
+                background: "black",
+              },
+            },
           }}
         >
           OUR PROJECTS
           <Box
+            className="project-circle"
             sx={{
               width: 32,
               height: 32,
@@ -85,10 +97,12 @@ export default function HeroChairSection() {
               bgcolor: "white",
               ml: 2,
               display: "inline-block",
+              transition: "background 0.3s",
             }}
           />
         </Box>
       </Box>
+      </Link>
     </Box>
   );
 } 

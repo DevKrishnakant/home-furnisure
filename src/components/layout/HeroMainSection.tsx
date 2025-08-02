@@ -2,10 +2,8 @@ import { useEffect, useRef, useState, ReactNode } from "react";
 import { Box, Typography, AppBar, Toolbar, IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import Image from "next/image";
-import AnimatedLines from "@/components/AnimatedLines";
-import AnimatedLetters from "@/components/AnimatedLetters";
-import SharesModal from "@/components/SharesModal";
-import SharesMenuContent from "@/components/SharesMenuContent";
+import { AnimatedLines, AnimatedLetters } from "@/components/animations";
+import { SharesModal, SharesMenuContent, SearchModal } from "@/components/modals";
 
 interface HeroMainSectionProps {
   videoUrl?: string;
@@ -17,6 +15,7 @@ interface HeroMainSectionProps {
   showRightBar?: boolean;
   animatedLines?: string[];
   animatedLetters?: string;
+  menuCatagory:boolean;
   children?: ReactNode;
 }
 
@@ -30,9 +29,11 @@ export default function HeroMainSection({
   showRightBar = true,
   animatedLines,
   animatedLetters,
+  menuCatagory=false,
   children,
 }: HeroMainSectionProps) {
   const [openShares, setOpenShares] = useState(false);
+  const [openSearch, setOpenSearch] = useState(false);
 
   // For animatedLetters (exclusive text)
   const letters = animatedLetters
@@ -80,6 +81,10 @@ export default function HeroMainSection({
 
   return (
     <>
+      <SearchModal
+        open={openSearch}
+        onClose={() => setOpenSearch(false)}
+      />
       <SharesModal
         open={openShares}
         onClose={() => setOpenShares(false)}
@@ -91,12 +96,11 @@ export default function HeroMainSection({
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                borderRight: { md: "1px solid #444" },
+                borderRight: { md: "1px solid white" },
                 bgcolor: "black",
                 minHeight: 0,
-                minWidth: 0,
+                minWidth: "428px",
                 height: "100vh",
-                width: "400px"
               }}
             >
               <img
@@ -193,7 +197,7 @@ export default function HeroMainSection({
                   }}
                   onClick={() => setOpenShares(true)}
                 />
-                <IconButton sx={{ color: "black" }}>
+                <IconButton sx={{ color: "black" }} onClick={() => setOpenSearch(true)}>
                   <Box>
                     <SearchIcon sx={{ fontSize: 24 }} />
                   </Box>
@@ -280,10 +284,10 @@ export default function HeroMainSection({
                 textAlign: "center",
                 margin: 0,
                 fontWeight: 900,
-                fontSize: "21vw",
+                fontSize: menuCatagory ? "10vw" : "22vw",
                 color: "#fff",
                 textTransform: "lowercase",
-                letterSpacing: -28,
+                letterSpacing: menuCatagory?-10:-28,
                 lineHeight: "13vw",
                 textShadow: "0 2px 16px rgba(0,0,0,0.4)",
                 userSelect: "none",
@@ -297,8 +301,8 @@ export default function HeroMainSection({
                 parallaxOnScroll={true}
                 sx={{
                   fontWeight: 900,
-                  fontSize: "21vw",
-                  letterSpacing: -28,
+                  fontSize: menuCatagory ? "10vw" : "22vw",
+                letterSpacing: menuCatagory?-10:-28,
                   lineHeight: "13vw",
                   color: "#fff",
                   textTransform: "lowercase",

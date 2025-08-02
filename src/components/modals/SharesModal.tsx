@@ -20,24 +20,28 @@ export default function SharesModal({ open, onClose, leftSection, children }: Sh
       setIsModalVisible(false);
       setIsContentVisible(false);
       
-      // Start modal slide down animation
-      requestAnimationFrame(() => {
+      // Start modal slide down animation with a slight delay
+      setTimeout(() => {
         setIsModalVisible(true);
-      });
+      }, 50);
       
       // Content reveals after modal is in place
       setTimeout(() => {
         setIsContentVisible(true);
-      }, 500);
+      }, 600); // Increased delay for more pronounced effect
     } else {
-      // Animate out content first, then modal
+      // First animate out content
       setIsContentVisible(false);
+      
+      // Then animate out modal after content is fully hidden
       setTimeout(() => {
         setIsModalVisible(false);
+        
+        // Finally remove from DOM after modal animation completes
         setTimeout(() => {
           setShouldRender(false);
-        }, 500);
-      }, 2000);
+        }, 800); // Match modal animation duration
+      }, 800); // Wait longer for content to fully fade out
     }
   }, [open]);
 
@@ -55,11 +59,12 @@ export default function SharesModal({ open, onClose, leftSection, children }: Sh
         color: "white",
         opacity: isModalVisible ? 1 : 0,
         transform: isModalVisible ? "translateY(0)" : "translateY(-100vh)",
-        transition: "opacity 0.5s ease-out, transform 0.5s ease-out",
+        transition: "opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)",
         zIndex: 9999,
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' },
         alignItems: 'stretch',
+        overflow: 'hidden', // Prevent scroll during animation
       }}
     >
       {leftSection}
@@ -73,8 +78,9 @@ export default function SharesModal({ open, onClose, leftSection, children }: Sh
             color: "white",
             zIndex: 10,
             opacity: isContentVisible ? 1 : 0,
-            transition: "opacity 0.3s ease-out",
-            transitionDelay: "0.1s"
+            transform: isContentVisible ? "translateY(0)" : "translateY(-20px)",
+            transition: "opacity 0.6s ease-out, transform 0.6s ease-out",
+            transitionDelay: "0.2s"
           }}
           aria-label="close"
         >
