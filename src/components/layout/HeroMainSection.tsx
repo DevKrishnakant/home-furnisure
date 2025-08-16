@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, ReactNode } from "react";
-import { Box, Typography, AppBar, Toolbar, IconButton } from "@mui/material";
+import { Box, Typography, AppBar, Toolbar, IconButton, useTheme, useMediaQuery } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import Image from "next/image";
 import { AnimatedLines, AnimatedLetters } from "@/components/animations";
@@ -15,7 +15,7 @@ interface HeroMainSectionProps {
   showRightBar?: boolean;
   animatedLines?: string[];
   animatedLetters?: string;
-  menuCatagory:boolean;
+  menuCatagory: boolean;
   children?: ReactNode;
 }
 
@@ -29,11 +29,15 @@ export default function HeroMainSection({
   showRightBar = true,
   animatedLines,
   animatedLetters,
-  menuCatagory=false,
+  menuCatagory = false,
   children,
 }: HeroMainSectionProps) {
   const [openShares, setOpenShares] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
 
   // For animatedLetters (exclusive text)
   const letters = animatedLetters
@@ -79,6 +83,14 @@ export default function HeroMainSection({
     return () => window.removeEventListener("scroll", handleScroll);
   }, [animatedLetters, letters]);
 
+  // Responsive font size calculations
+  const getResponsiveFontSize = (mobile: number, tablet: number, desktop: number, largeDesktop?: number) => {
+    if (isMobile) return `${mobile}px`;
+    if (isTablet) return `${tablet}px`;
+    if (isDesktop) return largeDesktop ? `${largeDesktop}px` : `${desktop}px`;
+    return `${desktop}px`;
+  };
+
   return (
     <>
       <SearchModal
@@ -99,16 +111,17 @@ export default function HeroMainSection({
                 borderRight: { md: "1px solid white" },
                 bgcolor: "black",
                 minHeight: 0,
-                minWidth: "428px",
+                minWidth: { xs: "100%", md: "428px" },
                 height: "100vh",
               }}
             >
-              <img
+              <Box
+                component="img"
                 src="https://www.rigas-furniture.gr/wp-content/uploads/2025/05/logo.png.webp"
                 alt="Logo"
-                style={{
-                  width: 240,
-                  height: 240,
+                sx={{
+                  width: { xs: "100px", sm: "140px", md: "180px", lg: "220px" },
+                  height: "auto",
                   objectFit: "contain",
                   display: "block",
                   filter: "invert(1)"
@@ -124,15 +137,15 @@ export default function HeroMainSection({
       </SharesModal>
       <Box
         sx={{
-          minHeight: "100vh",
-          width: "100vw",
-          position: "relative",
-          overflow: "hidden",
+          minHeight: { xs: '100vh', sm: '100vh', md: '100vh' },
+          width: '100vw',
+          position: 'relative',
+          overflow: 'hidden',
           backgroundImage: backgroundImageUrl ? `url('${backgroundImageUrl}')` : undefined,
-          backgroundSize: backgroundImageUrl ? "cover" : undefined,
-          backgroundPosition: backgroundImageUrl ? "center" : undefined,
-          display: "flex",
-          flexDirection: "column",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          display: 'flex',
+          flexDirection: 'column',
         }}
       >
         {/* Background Video */}
@@ -163,87 +176,161 @@ export default function HeroMainSection({
             />
           </Box>
         )}
+
         {/* Top Bar */}
         {showMenu && (
-          <AppBar position="fixed" color="transparent" elevation={0} sx={{ background: "none", boxShadow: "none", pt: 2, zIndex: 10 }}>
-            <Toolbar sx={{ justifyContent: "space-between", alignItems: "flex-start" }}>
-              {/* Logo */}
+          <AppBar
+            position="fixed"
+            color="transparent"
+            elevation={0}
+            sx={{
+              background: 'none',
+              boxShadow: 'none',
+              pt: { xs: 1, sm: 1.5, md: 2 },
+              zIndex: 10
+            }}
+          >
+            <Toolbar
+              sx={{
+                justifyContent: 'space-between',
+                alignItems: 'flex-start',
+                px: { xs: 2, sm: 3, md: 6 },
+                minHeight: { xs: '64px', sm: '70px', md: '80px' }
+              }}
+            >
+              {/* Logo - already responsive */}
               {showLogo && (
-                <Box sx={{ pl: 6, pt: 3 }}>
-                  <Image
+                <Box sx={{
+                  pl: { xs: 0, sm: 1, md: 6 },
+                  pt: { xs: 0.5, sm: 1, md: 3 },
+                  display: 'flex',
+                  alignItems: 'center'
+                }}>
+                  <Box
+                    component="img"
                     src="https://www.rigas-furniture.gr/wp-content/uploads/2025/05/logo.png.webp"
                     alt="Logo"
-                    width={90}
-                    height={90}
-                    style={{ objectFit: "contain" }}
-                    priority
+                    sx={{
+                      height: { xs: '32px', sm: '40px', md: '50px', lg: '70px', xl: '80px' },
+                      width: 'auto',
+                      objectFit: 'contain',
+                      display: 'block'
+                    }}
                   />
                 </Box>
               )}
+
               {/* Menu & Search */}
-              <Box sx={{ display: "flex", alignItems: "center", pr: 4, pt: 7 }}>
-                <Typography variant="h6" sx={{ mr: 1, fontWeight: 400, letterSpacing: -1.5, color: "black", fontSize: "1.3rem", cursor: "pointer" }} onClick={() => setOpenShares(true)}>
+              <Box sx={{
+                display: 'flex',
+                alignItems: 'center',
+                pr: { xs: 1, sm: 2, md: 4 },
+                pt: { xs: 1, sm: 1.5, md: 7 },
+                gap: { xs: 1, sm: 1.5, md: 2 }
+              }}>
+                <Typography
+                  variant="h6"
+                  sx={{
+                    mr: { xs: 0.5, sm: 1 },
+                    fontWeight: 400,
+                    letterSpacing: { xs: -0.5, sm: -1, md: -1.5 },
+                    color: 'black',
+                    fontSize: getResponsiveFontSize(14, 16, 20, 24),
+                    cursor: 'pointer',
+                    whiteSpace: 'nowrap'
+                  }}
+                  onClick={() => setOpenShares(true)}
+                >
                   MENU
                 </Typography>
                 {/* Black circle */}
                 <Box
                   sx={{
-                    width: 20,
-                    height: 20,
-                    borderRadius: "50%",
-                    bgcolor: "black",
-                    mb: 1,
-                    cursor: "pointer",
+                    width: { xs: 12, sm: 14, md: 20 },
+                    height: { xs: 12, sm: 14, md: 20 },
+                    ml: { xs: '4px', sm: '6px', md: '7px' },
+                    borderRadius: '50%',
+                    bgcolor: 'black',
+                    mb: { xs: '2px', sm: '3px', md: '7px' },
+                    cursor: 'pointer',
+                    flexShrink: 0
                   }}
                   onClick={() => setOpenShares(true)}
                 />
-                <IconButton sx={{ color: "black" }} onClick={() => setOpenSearch(true)}>
+                <IconButton
+                  sx={{
+                    color: 'black',
+                    p: { xs: 0.25, sm: 0.5, md: 1 },
+                    minWidth: 'auto'
+                  }}
+                  onClick={() => setOpenSearch(true)}
+                >
                   <Box>
-                    <SearchIcon sx={{ fontSize: 24 }} />
+                    <img
+                      src={"https://cdn-icons-png.flaticon.com/128/2811/2811806.png"}
+                      height={isMobile ? "18px" : isTablet ? "20px" : "22px"}
+                      style={{ marginBottom: '2px' }}
+                    />
                   </Box>
                 </IconButton>
               </Box>
             </Toolbar>
           </AppBar>
         )}
+
         {/* Main Content */}
-        <Box sx={{ flex: 1, position: "relative", width: "100%", pt: 8 }}>
-          {/* Animated Lines (e.g., 50 YEARS OF...) */}
+        <Box sx={{
+          flex: 1,
+          position: 'relative',
+          width: '100%',
+          pt: { xs: 6, sm: 8, md: 10 },
+          pb: { xs: 2, sm: 4, md: 6 }
+        }}>
+          {/* Animated Lines (e.g., 50 YEARS OF...) - Updated positioning */}
           {animatedLines && (
             <Box
               sx={{
-                position: "absolute",
-                top: { xs: 100, md: 292 },
-                right: { xs: 20, md: 71 },
-                color: "#fff",
-                textAlign: "right",
+                position: 'absolute',
+                bottom: { xs: 120, sm: 190, md: 250 }, // adjust to be right above animated letters
+                right: { xs: 16, sm: 24, md: 95 },
+                color: '#fff',
+                textAlign: { xs: 'right', md: 'right' },
                 zIndex: 2,
-                width: { xs: '90vw', md: 'auto' },
+                width: { xs: 'calc(100vw - 32px)', sm: 'calc(100vw - 48px)', md: 'auto' },
                 maxWidth: { xs: '100vw', md: 'none' },
+                px: { xs: 1, sm: 2, md: 0 }
               }}
             >
               <AnimatedLines
                 lines={animatedLines}
                 delayStep={0.18}
+                fontSize={{
+                  xs: getResponsiveFontSize(12, 14, 16),
+                  sm: getResponsiveFontSize(14, 16, 18),
+                  md: getResponsiveFontSize(16, 18, 20)
+                }}
               />
             </Box>
+
           )}
+
           {/* Right side black bar with W. Honors */}
           {showRightBar && (
             <Box
               sx={{
-                position: "fixed",
-                top: 270,
+                position: { xs: 'absolute', md: 'fixed' },
+                top: { xs: 100, sm: 140, md: 270 },
                 right: 0,
-                width: 50,
-                height: "24vh",
-                bgcolor: "black",
+                width: { xs: 24, sm: 32, md: 50 },
+                height: { xs: '12vh', sm: '16vh', md: '24vh' },
+                bgcolor: 'black',
                 zIndex: 9,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "space-between",
-                pt: 2,
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                pt: { xs: 0.5, sm: 1, md: 2 },
+                pb: { xs: 0.5, sm: 1, md: 2 }
               }}
             >
               <Typography
@@ -251,6 +338,7 @@ export default function HeroMainSection({
                 sx={{
                   color: "white",
                   fontWeight: 300,
+                  fontSize: getResponsiveFontSize(12, 16, 20, 24)
                 }}
               >
                 W.
@@ -263,36 +351,57 @@ export default function HeroMainSection({
                   writingMode: "vertical-rl",
                   textOrientation: "mixed",
                   transform: "rotate(180deg)",
-                  marginBottom: 2,
+                  marginBottom: { xs: 1, sm: 1.5, md: 2 },
+                  fontSize: getResponsiveFontSize(10, 12, 14, 16)
                 }}
               >
                 Honors
               </Typography>
             </Box>
           )}
+
           {/* Large animated letters (e.g., exclusive) */}
           {animatedLetters && (
             <Box
               component="h2"
               className="no-margin"
               sx={{
-                position: "absolute",
-                bottom: { xs: 20, md: 40 },
-                left: "50%",
-                transform: "translateX(-50%)",
-                width: "100%",
-                textAlign: "center",
+                position: 'absolute',
+                bottom: { xs: 20, sm: 30, md: 40 },
+                left: '50%',
+                transform: 'translateX(-50%)',
+                width: '100%',
+                textAlign: 'center',
                 margin: 0,
                 fontWeight: 900,
-                fontSize: menuCatagory ? "10vw" : "22vw",
-                color: "#fff",
-                textTransform: "lowercase",
-                letterSpacing: menuCatagory?-10:-28,
-                lineHeight: "13vw",
-                textShadow: "0 2px 16px rgba(0,0,0,0.4)",
-                userSelect: "none",
+                fontSize: menuCatagory
+                  ? {
+                    xs: '2rem',
+                    sm: 'clamp(2rem, 4vw, 3.5rem)',
+                    md: 'clamp(3.5rem, 8vw, 6rem)',
+                    lg: 'clamp(6rem, 10vw, 8rem)'
+                  }
+                  : {
+                    xs: 'clamp(2rem, 18vw, 10rem)',
+                    sm: 'clamp(7rem, 14vw, 20rem)',
+                    md: 'clamp(10rem, 18vw, 24rem)',
+                    lg: 'clamp(15rem, 19vw, 26rem)'
+                  },
+                color: '#fff',
+                textTransform: 'lowercase',
+                letterSpacing: menuCatagory
+                  ? { xs: -1, sm: -3, md: -6, lg: -10 }
+                  : { xs: -4, sm: -10, md: -16, lg: -24 },
+                lineHeight: menuCatagory
+                  ? { xs: '2.5rem', sm: '1.2', md: '1.1', lg: '1' }
+                  : { xs: '1.2', sm: '1.1', md: '1', lg: '0.9' },
+                textShadow: '0 2px 16px rgba(0,0,0,0.4)',
+                userSelect: 'none',
                 zIndex: 3,
-                pointerEvents: "none",
+                pointerEvents: 'none',
+                px: { xs: 2, sm: 3, md: 0 },
+                whiteSpace: 'nowrap', // Forces single line
+
               }}
             >
               <AnimatedLetters
@@ -301,9 +410,9 @@ export default function HeroMainSection({
                 parallaxOnScroll={true}
                 sx={{
                   fontWeight: 900,
-                  fontSize: menuCatagory ? "10vw" : "22vw",
-                letterSpacing: menuCatagory?-10:-28,
-                  lineHeight: "13vw",
+                  fontSize: 'inherit',
+                  letterSpacing: 'inherit',
+                  lineHeight: 'inherit',
                   color: "#fff",
                   textTransform: "lowercase",
                   textShadow: "0 2px 16px rgba(0,0,0,0.4)",
@@ -314,29 +423,36 @@ export default function HeroMainSection({
               />
             </Box>
           )}
+
           {/* Main Text (e.g., about us) */}
           {mainText && (
             <Box
               sx={{
-                position: "absolute",
-                top: { xs: 120, md: 220 },
+                position: 'absolute',
+                top: { xs: 80, sm: 120, md: 220 },
                 left: 0,
-                width: "100%",
-                textAlign: "center",
+                width: '100%',
+                textAlign: 'center',
                 zIndex: 2,
+                px: { xs: 3, sm: 4, md: 6 },
               }}
             >
               <Typography
                 variant="h1"
                 sx={{
                   fontWeight: 900,
-                  fontSize: { xs: "3.5rem", md: "10vw" },
-                  color: "#fff",
-                  textTransform: "lowercase",
-                  letterSpacing: -6,
-                  lineHeight: 1,
-                  textShadow: "0 2px 16px rgba(0,0,0,0.4)",
-                  userSelect: "none",
+                  fontSize: {
+                    xs: 'clamp(1.5rem, 6vw, 2rem)',
+                    sm: 'clamp(2rem, 5vw, 3rem)',
+                    md: 'clamp(3rem, 6vw, 4rem)',
+                    lg: 'clamp(4rem, 10vw, 6rem)'
+                  },
+                  color: '#fff',
+                  textTransform: 'lowercase',
+                  letterSpacing: { xs: -1, sm: -2, md: -4, lg: -6 },
+                  lineHeight: { xs: 1.1, sm: 1.05, md: 1 },
+                  textShadow: '0 2px 16px rgba(0,0,0,0.4)',
+                  userSelect: 'none',
                   m: 0,
                   p: 0,
                 }}
@@ -348,12 +464,18 @@ export default function HeroMainSection({
                   variant="h4"
                   sx={{
                     fontWeight: 400,
-                    fontSize: { xs: "1.5rem", md: "2.5vw" },
-                    color: "#fff",
-                    textShadow: "0 2px 16px rgba(0,0,0,0.4)",
-                    userSelect: "none",
+                    fontSize: {
+                      xs: 'clamp(0.75rem, 3vw, 1rem)',
+                      sm: 'clamp(1rem, 2.5vw, 1.25rem)',
+                      md: 'clamp(1.25rem, 1.5vw, 1.5rem)',
+                      lg: 'clamp(1.5rem, 2.5vw, 2rem)'
+                    },
+                    color: '#fff',
+                    textShadow: '0 2px 16px rgba(0,0,0,0.4)',
+                    userSelect: 'none',
                     m: 0,
                     p: 0,
+                    mt: { xs: 1, sm: 1.5, md: 2 }
                   }}
                 >
                   {subText}
@@ -366,4 +488,4 @@ export default function HeroMainSection({
       </Box>
     </>
   );
-} 
+}

@@ -36,11 +36,11 @@ export default function AnimatedLines({ lines, delayStep = 0.25, sx, className }
             transition: "opacity 0.5s cubic-bezier(.68,-0.55,.27,1.55), transform 0.7s cubic-bezier(.68,-0.55,.27,1.55)",
             transitionDelay: `${i * delayStep}s`,
             textAlign: "right",
-            fontSize: "1.9rem",
+            fontSize: { xs: "1.1rem", sm: "1.4rem", md: "1.6rem", lg: "1.9rem" },
             fontFamily: "sans-serif",
             fontWeight: 300,
-            letterSpacing: -2,
-            lineHeight: "2.3rem",
+            letterSpacing: { xs: -0.5, sm: -1, md: -1.5, lg: -2 },
+            lineHeight: { xs: "1.4rem", sm: "1.7rem", md: "1.9rem", lg: "2.3rem" },
             whiteSpace: "pre-line",
           }}
         >

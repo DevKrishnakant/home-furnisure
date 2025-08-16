@@ -1,0 +1,479 @@
+{
+  "trapezaria": {
+    "category": "ΤΡΑΠΕΖΑΡΙΑ",
+    "description": "Συνδυάστε πολυτέλεια, εργονομία και διαχρονικό design, δημιουργώντας μια",
+    "products": [
+      {
+        "id": "trapezi-1",
+        "title": "ΤΡΑΠΕΖΙ",
+        "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/TRAPEZARIA-TRAPEZI-1.jpg.webp",
+        "description": "Κλασικό ξύλινο τραπέζι για 6 άτομα με φυσικό finish",
+        "products": [
+          {
+            "id": "trapezi-1-1",
+            "name": "Τραπέζι Δείπνου Ξύλινο",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/trapezi-dinner-1.jpg.webp",
+            "description": "Κλασικό τραπέζι δείπνου από σολιδωμένο ξύλο, ιδανικό για 6-8 άτομα",
+            "price": "€450"
+          },
+          {
+            "id": "trapezi-1-2",
+            "name": "Τραπέζι Επεκτάσιμο",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/trapezi-extendable-1.jpg.webp",
+            "description": "Επεκτάσιμο τραπέζι που προσαρμόζεται από 4 έως 10 άτομα",
+            "price": "€680"
+          },
+          {
+            "id": "trapezi-1-3",
+            "name": "Τραπέζι Στρογγυλό",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/trapezi-round-1.jpg.webp",
+            "description": "Στρογγυλό τραπέζι με μοντέρνο design για 4 άτομα",
+            "price": "€320"
+          }
+        ]
+      },
+      {
+        "id": "kathisma-1",
+        "title": "ΚΑΘΙΣΜΑ",
+        "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/TRAPEZARIA-KATHISMA-1.jpg.webp",
+        "description": "Άνετα καθίσματα για το τραπεζάρι σας",
+        "products": [
+          {
+            "id": "kathisma-1-1",
+            "name": "Καρέκλα Δείπνου Κλασική",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/karekla-dinner-1.jpg.webp",
+            "description": "Κλασική καρέκλα δείπνου με ξύλινο πλαίσιο και ύφασμα",
+            "price": "€120"
+          },
+          {
+            "id": "kathisma-1-2",
+            "name": "Καρέκλα Μοντέρνα",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/karekla-modern-1.jpg.webp",
+            "description": "Μοντέρνα καρέκλα με μεταλλικό πλαίσιο και πλαστικό κάθισμα",
+            "price": "€95"
+          },
+          {
+            "id": "kathisma-1-3",
+            "name": "Καρέκλα Βαρελού",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/karekla-barrel-1.jpg.webp",
+            "description": "Καρέκλα βαρελού με ergonomic design και μαλακό padding",
+            "price": "€180"
+          }
+        ]
+      },
+      {
+        "id": "skampo-1",
+        "title": "ΣΚΑΜΠΟ",
+        "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/TRAPEZARIA-SKAMPO-1.jpg.webp",
+        "description": "Πρακτικά σκαμπά για το τραπεζάρι",
+        "products": [
+          {
+            "id": "skampo-1-1",
+            "name": "Σκαμπό Ξύλινο",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/skampo-wooden-1.jpg.webp",
+            "description": "Ξύλινο σκαμπό με φυσικό finish, ιδανικό για τραπεζάρι",
+            "price": "€85"
+          },
+          {
+            "id": "skampo-1-2",
+            "name": "Σκαμπό Μεταλλικό",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/skampo-metal-1.jpg.webp",
+            "description": "Μεταλλικό σκαμπό με μοντέρνο design και ανθεκτικότητα",
+            "price": "€75"
+          },
+          {
+            "id": "skampo-1-3",
+            "name": "Σκαμπό Με Πλάτη",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/skampo-back-1.jpg.webp",
+            "description": "Σκαμπό με πλάτη για επιπλέον άνεση",
+            "price": "€110"
+          }
+        ]
+      }
+    ]
+  },
+  "saloni": {
+    "category": "ΣΑΛΟΝΙ",
+    "description": "Δημιουργήστε ένα ζεστό και φιλόξενο σαλόνι με τα έπιπλα μας",
+    "products": [
+      {
+        "id": "kanapes-1",
+        "title": "ΚΑΝΑΠΕΣ",
+        "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/SALONI-KANAPES-1.jpg.webp",
+        "description": "Άνετες καναπές για το σαλόνι σας",
+        "products": [
+          {
+            "id": "kanapes-1-1",
+            "name": "Καναπές 3 Θέσεων",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/kanapes-3seats-1.jpg.webp",
+            "description": "Καναπές 3 θέσεων με μαλακό padding και μοντέρνο design",
+            "price": "€850"
+          },
+          {
+            "id": "kanapes-1-2",
+            "name": "Καναπές Γωνιακός",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/kanapes-corner-1.jpg.webp",
+            "description": "Γωνιακός καναπές που εκμεταλλεύεται κάθε γωνία του χώρου",
+            "price": "€1200"
+          },
+          {
+            "id": "kanapes-1-3",
+            "name": "Καναπές Chesterfield",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/kanapes-chesterfield-1.jpg.webp",
+            "description": "Κλασικός καναπές Chesterfield με δερμάτινο κάλυμμα",
+            "price": "€1500"
+          }
+        ]
+      },
+      {
+        "id": "polythrona-1",
+        "title": "ΠΟΛΥΘΡΟΝΑ",
+        "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/SALONI-POLYTHRONA-1.jpg.webp",
+        "description": "Άνετα πολυθρόνες για το σαλόνι",
+        "products": [
+          {
+            "id": "polythrona-1-1",
+            "name": "Πολυθρόνα Recliner",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/polythrona-recliner-1.jpg.webp",
+            "description": "Πολυθρόνα με recliner mechanism για μέγιστη άνεση",
+            "price": "€450"
+          },
+          {
+            "id": "polythrona-1-2",
+            "name": "Πολυθρόνα Wingback",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/polythrona-wingback-1.jpg.webp",
+            "description": "Κλασική πολυθρόνα wingback με ύφασμα",
+            "price": "€380"
+          },
+          {
+            "id": "polythrona-1-3",
+            "name": "Πολυθρόνα Modern",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/polythrona-modern-1.jpg.webp",
+            "description": "Μοντέρνα πολυθρόνα με καθαρές γραμμές",
+            "price": "€320"
+          }
+        ]
+      }
+    ]
+  },
+  "krevatokamara": {
+    "category": "ΚΡΕΒΑΤΟΚΑΜΑΡΑ",
+    "description": "Δημιουργήστε έναν προσωπικό και άνετο χώρο για το ύπνο",
+    "products": [
+      {
+        "id": "komodino-1",
+        "title": "ΚΟΜΟΔΙΝΟ",
+        "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/KREVATOKAMARA-KOMODINO-1.jpg.webp",
+        "description": "Πρακτικά κομοδίνα για την κρεβατοκάμαρα",
+        "products": [
+          {
+            "id": "komodino-1-1",
+            "name": "Κομοδίνο Ξύλινο",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/komodino-wooden-1.jpg.webp",
+            "description": "Ξύλινο κομοδίνο με 3 συρτάρια και φυσικό finish",
+            "price": "€280"
+          },
+          {
+            "id": "komodino-1-2",
+            "name": "Κομοδίνο Modern",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/komodino-modern-1.jpg.webp",
+            "description": "Μοντέρνο κομοδίνο με μεταλλικά πόδια και ύφασμα",
+            "price": "€220"
+          },
+          {
+            "id": "komodino-1-3",
+            "name": "Κομοδίνο Vintage",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/komodino-vintage-1.jpg.webp",
+            "description": "Vintage κομοδίνο με κλασικό design και χειροποίητα στοιχεία",
+            "price": "€350"
+          }
+        ]
+      },
+      {
+        "id": "krevati-1",
+        "title": "ΚΡΕΒΑΤΙ",
+        "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/KREVATOKAMARA-KREVATI-1.jpg.webp",
+        "description": "Άνετα κρεβάτια για καλό ύπνο",
+        "products": [
+          {
+            "id": "krevati-1-1",
+            "name": "Κρεβάτι Double",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/krevati-double-1.jpg.webp",
+            "description": "Κρεβάτι double με ξύλινο πλαίσιο και μαλακό padding",
+            "price": "€580"
+          },
+          {
+            "id": "krevati-1-2",
+            "name": "Κρεβάτι Queen",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/krevati-queen-1.jpg.webp",
+            "description": "Κρεβάτι queen size με μοντέρνο design",
+            "price": "€720"
+          },
+          {
+            "id": "krevati-1-3",
+            "name": "Κρεβάτι King",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/krevati-king-1.jpg.webp",
+            "description": "Κρεβάτι king size με πολυτέλεια και άνεση",
+            "price": "€950"
+          }
+        ]
+      }
+    ]
+  },
+  "boho": {
+    "category": "BOHO",
+    "description": "Τα έπιπλα boho style αποπνέουν μια αίσθηση ελευθερίας, φυσικότητας και χαλαρής κομψότητας",
+    "products": [
+      {
+        "id": "kathisma-boho-1",
+        "title": "ΚΑΘΙΣΜΑ",
+        "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/05/BOHO-%CE%9A%CE%91%CE%98%CE%99%CE%A3%CE%9C%CE%91-scaled-1.jpg.webp",
+        "description": "Άνετα καθίσματα boho style",
+        "products": [
+          {
+            "id": "kathisma-boho-1-1",
+            "name": "Καρέκλα Boho Wicker",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/karekla-boho-wicker-1.jpg.webp",
+            "description": "Καρέκλα από wicker με boho patterns και μαλακό padding",
+            "price": "€180"
+          },
+          {
+            "id": "kathisma-boho-1-2",
+            "name": "Καρέκλα Macramé",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/karekla-macrame-1.jpg.webp",
+            "description": "Καρέκλα με macramé details και φυσικά υλικά",
+            "price": "€220"
+          },
+          {
+            "id": "kathisma-boho-1-3",
+            "name": "Καρέκλα Vintage",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/karekla-vintage-boho-1.jpg.webp",
+            "description": "Vintage καρέκλα με boho aesthetic και χειροποίητα στοιχεία",
+            "price": "€280"
+          }
+        ]
+      },
+      {
+        "id": "kanapes-boho-1",
+        "title": "ΚΑΝΑΠΕΣ",
+        "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/Unknown-scaled.jpeg.webp",
+        "description": "Άνετες καναπές boho style",
+        "products": [
+          {
+            "id": "kanapes-boho-1-1",
+            "name": "Καναπές Boho Textured",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/kanapes-boho-textured-1.jpg.webp",
+            "description": "Καναπές με textured ύφασμα και boho patterns",
+            "price": "€950"
+          },
+          {
+            "id": "kanapes-boho-1-2",
+            "name": "Καναπές Natural Materials",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/kanapes-natural-materials-1.jpg.webp",
+            "description": "Καναπές από φυσικά υλικά με boho aesthetic",
+            "price": "€1200"
+          },
+          {
+            "id": "kanapes-boho-1-3",
+            "name": "Καναπές Ethnic",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/kanapes-ethnic-1.jpg.webp",
+            "description": "Καναπές με ethnic patterns και warm colors",
+            "price": "€1100"
+          }
+        ]
+      }
+    ]
+  },
+  "horeca": {
+    "category": "HORECA",
+    "description": "Μοντέρνα και κλασσικά έπιπλα για επαγγελματικούς χώρους HORECA",
+    "products": [
+      {
+        "id": "kathisma-horeca-1",
+        "title": "ΚΑΘΙΣΜΑ",
+        "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/HORECA-KATHISMA-1.jpg.webp",
+        "description": "Επαγγελματικά καθίσματα για HORECA",
+        "products": [
+          {
+            "id": "kathisma-horeca-1-1",
+            "name": "Καρέκλα Εστιατόριου",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/karekla-restaurant-1.jpg.webp",
+            "description": "Καρέκλα εστιατόριου με ανθεκτικό ύφασμα και ergonomic design",
+            "price": "€150"
+          },
+          {
+            "id": "kathisma-horeca-1-2",
+            "name": "Καρέκλα Bar",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/karekla-bar-1.jpg.webp",
+            "description": "Καρέκλα bar με ύψος 75cm και ανθεκτικό κάθισμα",
+            "price": "€120"
+          },
+          {
+            "id": "kathisma-horeca-1-3",
+            "name": "Καρέκλα Café",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/karekla-cafe-1.jpg.webp",
+            "description": "Καρέκλα café με ελαφρύ design και ευκολία μετακίνησης",
+            "price": "€95"
+          }
+        ]
+      },
+      {
+        "id": "trapezi-horeca-1",
+        "title": "ΤΡΑΠΕΖΙ",
+        "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/HORECA-TRAPEZI-1.jpg.webp",
+        "description": "Επαγγελματικά τραπέζια για HORECA",
+        "products": [
+          {
+            "id": "trapezi-horeca-1-1",
+            "name": "Τραπέζι Εστιατόριου",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/trapezi-restaurant-1.jpg.webp",
+            "description": "Τραπέζι εστιατόριου με ανθεκτική επιφάνεια και μεταλλικό πλαίσιο",
+            "price": "€280"
+          },
+          {
+            "id": "trapezi-horeca-1-2",
+            "name": "Τραπέζι Bar",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/trapezi-bar-1.jpg.webp",
+            "description": "Τραπέζι bar με ύψος 110cm και ανθεκτικό finish",
+            "price": "€220"
+          },
+          {
+            "id": "trapezi-horeca-1-3",
+            "name": "Τραπέζι Café",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/trapezi-cafe-1.jpg.webp",
+            "description": "Τραπέζι café με ελαφρύ design και ευκολία μετακίνησης",
+            "price": "€180"
+          }
+        ]
+      }
+    ]
+  },
+  "outdoor": {
+    "category": "OUTDOOR",
+    "description": "Τα έπιπλα εξωτερικού χώρου είναι απαραίτητα για να μετατρέψετε τον κήπο, τη βεράντα",
+    "products": [
+      {
+        "id": "kathisma-outdoor-1",
+        "title": "ΚΑΘΙΣΜΑ",
+        "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/OUTDOOR-KATHISMA-1.jpg.webp",
+        "description": "Ανθεκτικά καθίσματα για εξωτερικούς χώρους",
+        "products": [
+          {
+            "id": "kathisma-outdoor-1-1",
+            "name": "Καρέκλα Κήπου",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/karekla-garden-1.jpg.webp",
+            "description": "Καρέκλα κήπου από ανθεκτικό πλαστικό με UV προστασία",
+            "price": "€85"
+          },
+          {
+            "id": "kathisma-outdoor-1-2",
+            "name": "Καρέκλα Βεράντας",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/karekla-veranda-1.jpg.webp",
+            "description": "Καρέκλα βεράντας με wicker construction και water-resistant ύφασμα",
+            "price": "€120"
+          },
+          {
+            "id": "kathisma-outdoor-1-3",
+            "name": "Καρέκλα Pool",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/karekla-pool-1.jpg.webp",
+            "description": "Καρέκλα pool με ανθεκτικό πλαστικό και quick-dry ύφασμα",
+            "price": "€95"
+          }
+        ]
+      },
+      {
+        "id": "trapezi-outdoor-1",
+        "title": "ΤΡΑΠΕΖΙ",
+        "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/OUTDOOR-TRAPEZI-1.jpg.webp",
+        "description": "Ανθεκτικά τραπέζια για εξωτερικούς χώρους",
+        "products": [
+          {
+            "id": "trapezi-outdoor-1-1",
+            "name": "Τραπέζι Κήπου",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/trapezi-garden-1.jpg.webp",
+            "description": "Τραπέζι κήπου από ανθεκτικό πλαστικό με UV προστασία",
+            "price": "€180"
+          },
+          {
+            "id": "trapezi-outdoor-1-2",
+            "name": "Τραπέζι Βεράντας",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/trapezi-veranda-1.jpg.webp",
+            "description": "Τραπέζι βεράντας με wicker construction και tempered glass",
+            "price": "€250"
+          },
+          {
+            "id": "trapezi-outdoor-1-3",
+            "name": "Τραπέζι Pool",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/trapezi-pool-1.jpg.webp",
+            "description": "Τραπέζι pool με ανθεκτικό πλαστικό και water-resistant finish",
+            "price": "€220"
+          }
+        ]
+      }
+    ]
+  },
+  "deco-n-more": {
+    "category": "DECO N MORE",
+    "description": "Τα είδη διακόσμησης σπιτιού είναι ένας πολύ καλός τρόπος για να",
+    "products": [
+      {
+        "id": "fwtistiko-1",
+        "title": "ΦΩΤΙΣΤΙΚΟ",
+        "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/DECO-FWTISTIKO-1.jpg.webp",
+        "description": "Εκλεκτικά φωτιστικά για κάθε χώρο",
+        "products": [
+          {
+            "id": "fwtistiko-1-1",
+            "name": "Λάμπα Τραπεζάριου",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/lampa-trapezariou-1.jpg.webp",
+            "description": "Λάμπα τραπεζάριου με κλασικό design και warm light",
+            "price": "€120"
+          },
+          {
+            "id": "fwtistiko-1-2",
+            "name": "Λάμπα Σαλονιού",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/lampa-salon-1.jpg.webp",
+            "description": "Λάμπα σαλονιού με μοντέρνο design και dimmable λειτουργία",
+            "price": "€180"
+          },
+          {
+            "id": "fwtistiko-1-3",
+            "name": "Λάμπα Κρεβατοκάμαρας",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/lampa-bedroom-1.jpg.webp",
+            "description": "Λάμπα κρεβατοκάμαρας με soft light και elegant design",
+            "price": "€95"
+          }
+        ]
+      },
+      {
+        "id": "pinakas-1",
+        "title": "ΠΙΝΑΚΑΣ",
+        "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/DECO-PINAKAS-1.jpg.webp",
+        "description": "Όμορφοι πίνακες για τη διακόσμηση του σπιτιού",
+        "products": [
+          {
+            "id": "pinakas-1-1",
+            "name": "Πίνακας Abstract",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/pinakas-abstract-1.jpg.webp",
+            "description": "Πίνακας abstract με έντονα χρώματα και μοντέρνο design",
+            "price": "€150"
+          },
+          {
+            "id": "pinakas-1-2",
+            "name": "Πίνακας Landscape",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/pinakas-landscape-1.jpg.webp",
+            "description": "Πίνακας landscape με φυσικά τοπία και ήρεμα χρώματα",
+            "price": "€200"
+          },
+          {
+            "id": "pinakas-1-3",
+            "name": "Πίνακας Vintage",
+            "image": "https://www.rigas-furniture.gr/wp-content/uploads/2025/04/pinakas-vintage-1.jpg.webp",
+            "description": "Vintage πίνακας με κλασικό design και χειροποίητα στοιχεία",
+            "price": "€280"
+          }
+        ]
+      }
+    ]
+  }
+} 

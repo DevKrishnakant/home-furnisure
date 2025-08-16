@@ -1,4 +1,5 @@
 "use client";
+import { SlidingText } from "@/components/animations";
 import { ShareSection, AboutSection, ProjectGallerySection, HeroChairSection, AwardsSection } from "@/components/features";
 import { FooterSection, HeroMainSection } from "@/components/layout";
 
@@ -19,6 +20,7 @@ export default function Home() {
       <HeroChairSection />
       <AwardsSection />
       <FooterSection />
+      <SlidingText/>
     </>
   );
 }

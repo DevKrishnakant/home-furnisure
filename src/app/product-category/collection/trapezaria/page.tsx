@@ -1,47 +1,68 @@
 "use client";
+import { useRouter } from "next/navigation";
 import { HeroMainSection, FooterSection } from "@/components/layout";
 import { MenuCategoryBelowText, ImageGrid } from "@/components/features";
 import { SlidingText } from "@/components/animations";
 
 export default function TrapezariaPage() {
+  const router = useRouter();
+  
   const trapezariaImages = [
     {
       url: "https://www.rigas-furniture.gr/wp-content/uploads/2025/03/bibliothiki-rigas.png.webp",
       title: "ΒΙΒΛΙΟΘΗΚΗ",
       height: "350px",
-      width: "100%"
+      width: "100%",
+      id: "bibliothiki-trapezaria-1",
+      category: "trapezaria"
     },
     {
       url: "https://www.rigas-furniture.gr/wp-content/uploads/2025/03/trapezi-%CF%84%CF%89.png.webp",
       title: "ΕΠΙΠΛΟ TV",
       height: "350px",
-      width: "100%"
+      width: "100%",
+      id: "epiplo-tv-trapezaria-1",
+      category: "trapezaria"
     }, 
     {
       url: "https://www.rigas-furniture.gr/wp-content/uploads/2025/03/%CE%9A%CE%91%CE%A1%CE%95%CE%9A%CE%9B%CE%91-%CE%A4%CE%A1%CE%91%CE%A0%CE%95%CE%96%CE%91%CE%A1%CE%99%CE%91.webp",
       title: "ΚΑΘΙΣΜΑ",
       height: "480px",
-      width: "100%"
+      width: "100%",
+      id: "kathisma-trapezaria-1",
+      category: "trapezaria"
     },
     {
       url: "https://www.rigas-furniture.gr/wp-content/uploads/2025/03/%CE%9C%CE%A0%CE%9F%CE%A5%CE%A6%CE%95%CE%A3-%CE%A4%CE%A1%CE%91%CE%A0%CE%95%CE%96%CE%91%CE%A1%CE%99%CE%91.webp",
       title: "ΜΠΟΥΦΕΣ",
       height: "480px",
-      width: "100%"
+      width: "100%",
+      id: "mpoufes-trapezaria-1",
+      category: "trapezaria"
     },
     {
       url: "https://www.rigas-furniture.gr/wp-content/uploads/2025/03/skampo-saloni-voithitiko.png.webp",
       title: "ΣΚΑΜΠΟ",
       height: "380px",
-      width: "100%"
+      width: "100%",
+      id: "skampo-trapezaria-1",
+      category: "trapezaria"
     },
     {
       url: "https://www.rigas-furniture.gr/wp-content/uploads/2025/05/%CE%A4%CE%A1%CE%91%CE%A0%CE%95%CE%96%CE%91%CE%A1%CE%99%CE%91.png.webp",
       title: "ΤΡΑΠΕΖΙ",
       height: "760px",
-      width: "100%"
+      width: "100%",
+      id: "trapezi-trapezaria-1",
+      category: "trapezaria"
     }
   ];
+
+  const handleImageClick = (image: { url: string; title: string; id?: string; category?: string }) => {
+    if (image.id && image.category) {
+      router.push(`/product-category/collection/${image.category}/${image.id}`);
+    }
+  };
 
   return (
     <>
@@ -59,6 +80,7 @@ export default function TrapezariaPage() {
       <ImageGrid 
         images={trapezariaImages}
         gap={3}
+        onImageClick={handleImageClick}
       />
       <FooterSection />
       <SlidingText />

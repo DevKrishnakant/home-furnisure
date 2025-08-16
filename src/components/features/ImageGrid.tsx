@@ -9,13 +9,17 @@ interface ImageGridProps {
     title: string;
     height?: string;
     width?: string;
+    id?: string;
+    category?: string;
   }[];
   gap?: number;
+  onImageClick?: (image: { url: string; title: string; id?: string; category?: string }) => void;
 }
 
 export default function ImageGrid({
   images,
-  gap = 4
+  gap = 4,
+  onImageClick
 }: ImageGridProps) {
   const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -109,8 +113,14 @@ export default function ImageGrid({
                 position: 'relative',
                 height: image.height || "400px",
                 width: image.width || "100%",
-                overflow: 'hidden'
+                overflow: 'hidden',
+                cursor: onImageClick ? 'pointer' : 'default',
+                '&:hover': onImageClick ? {
+                  transform: 'scale(1.02)',
+                  transition: 'transform 0.3s ease'
+                } : {}
               }}
+              onClick={() => onImageClick && onImageClick(image)}
             >
               <Box
                 component="img"
@@ -162,8 +172,14 @@ export default function ImageGrid({
                 position: 'relative',
                 height: image.height || "400px",
                 width: image.width || "100%",
-                overflow: 'hidden'
+                overflow: 'hidden',
+                cursor: onImageClick ? 'pointer' : 'default',
+                '&:hover': onImageClick ? {
+                  transform: 'scale(1.02)',
+                  transition: 'transform 0.3s ease'
+                } : {}
               }}
+              onClick={() => onImageClick && onImageClick(image)}
             >
               <Box
                 component="img"
